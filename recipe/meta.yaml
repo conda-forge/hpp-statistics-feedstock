@@ -9,7 +9,7 @@ source:
   url: https://github.com/humanoid-path-planner/{{ name }}/releases/download/v{{ version }}/{{ name }}-{{ version }}.tar.gz
   sha256: 9f7730d53bf5c48a85004e7dbd6afdc22a46c853ddb02f4bf5965601e4fd3e15
   patches:
-    - patches/virtual_destructor.patch  # [osx]
+    - patches/osx_explicit_destruct_virtual.patch  # [osx]
     - patches/osx_explicit_cast.patch  # [osx]
 
 build:
