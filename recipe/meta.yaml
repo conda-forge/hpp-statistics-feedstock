@@ -27,7 +27,7 @@ requirements:
     - doxygen
   host:
     - boost-cpp
-    - hpp-util
+    - hpp-util {{ version }}
 
   run:
     - boost-cpp
