@@ -1,0 +1,25 @@
+From 9e1fcc3447ca712a9b8e377e8a6d3c6a59651cf1 Mon Sep 17 00:00:00 2001
+From: Yann Dubois De Mont-Marin <ydemontm@julia.paris.inria.fr>
+Date: Thu, 22 Sep 2022 15:35:36 +0200
+Subject: [PATCH] Explicit signe to unsigned cast for osxcompile
+
+---
+ tests/test-successstatistics.cc | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git tests/test-successstatistics.cc tests/test-successstatistics.cc
+index ea823f9..7d819ff 100644
+--- tests/test-successstatistics.cc
++++ tests/test-successstatistics.cc
+@@ -36,7 +36,7 @@ int main() {
+   counter[1] = 0;
+   counter[2] = 0;
+   for (int i = 0; i < 100; i++) {
+-    std::size_t nb = rand() % 3;
++    std::size_t nb = static_cast<std::size_t>(rand() % 3);
+     counter[nb]++;
+     switch (nb) {
+       case 0:
+-- 
+2.25.1
+
