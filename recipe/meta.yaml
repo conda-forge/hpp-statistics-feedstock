@@ -13,7 +13,7 @@ source:
     - patches/osx_explicit_cast.patch  # [osx]
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win]
   run_exports:
     - {{ pin_subpackage(name|lower, max_pin='x.x') }}
