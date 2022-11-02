@@ -1,5 +1,5 @@
 {% set name = "hpp-statistics" %}
-{% set version = "4.13.0" %}
+{% set version = "4.14.0" %}
 
 package:
   name: {{ name }}
@@ -7,13 +7,13 @@ package:
 
 source:
   url: https://github.com/humanoid-path-planner/{{ name }}/releases/download/v{{ version }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 9f7730d53bf5c48a85004e7dbd6afdc22a46c853ddb02f4bf5965601e4fd3e15
+  sha256: 41e69d4f790e4203802309cf63ca3c9eab92c64d395211ddde12acaf13743a09
   patches:
     - patches/osx_explicit_destruct_virtual.patch  # [osx]
     - patches/osx_explicit_cast.patch  # [osx]
 
 build:
-  number: 3
+  number: 0
   skip: true  # [win]
   run_exports:
     - {{ pin_subpackage(name|lower, max_pin='x.x') }}
