@@ -23,7 +23,7 @@ requirements:
     - pkg-config
     - doxygen
   host:
-    - libboost-devel
+    - libboost-headers
     - hpp-util {{ version }}
 
   run:
