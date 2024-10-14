@@ -1,4 +1,5 @@
 #!/bin/sh
+# Try auto launch
 
 mkdir build
 cd build
