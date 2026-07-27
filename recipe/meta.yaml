@@ -1,5 +1,5 @@
 {% set name = "hpp-statistics" %}
-{% set version = "9.0.0" %}
+{% set version = "9.0.2" %}
 
 package:
   name: {{ name }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/humanoid-path-planner/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: dfbeca092d523cd565e47ca0165cc42277b9067869e94b55d4bb2d77f295498f
+  sha256: 9fa385a9f2b15f9ff1a043cd1284c858cffeeb029492edeaf960c96f767a65e4
 
 build:
   number: 0
